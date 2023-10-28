@@ -1,0 +1,185 @@
+<head>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>ANGEL AMORE | JOIN THE CULT</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    .flash-accent {
+        left: 10px;
+        top: 10px;
+    }
+    p, h2, h1, h3, h4, button {
+        font-family: 'Goldman', cursive;
+    }
+    @media only screen and (max-width: 900px) {
+        h2 {
+            font-size: 60px;
+        }
+        h4 {
+            font-size: 40px;
+        }
+        button {
+            font-size: 20px;
+        }
+    }
+    .flash-container {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    right: 0px;
+    width: auto;
+    height: auto;
+}
+.flash {
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    height: auto;
+    right: 0;   
+  /* height: fit-content; */
+  /* max-height: 100%; */
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  transform: scale(1);
+  animation: pulse 4s infinite;
+}
+#flashes {
+    /* height: 100%;  */
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    /* width: 100%; */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#cap {
+  /* max-height: 100%; */
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  margin: 0 auto;
+  animation: float 6s ease-in-out infinite;
+}
+#flash1 {
+  animation: pulse 4s infinite;
+}
+#flash2 {
+  animation: pulse2 4s infinite;
+}
+.flashimg {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    /* animation: pulse2 4s infinite; */
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.99);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	60% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.99);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+@keyframes pulse2 {
+	0% {
+		transform: scale(1.01);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+    40% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(1.01);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+.imgbackground {
+    background-image: url("cap3.png");
+    background-repeat: repeat;
+    background-size: 20% auto;
+}
+#capcontainer {
+    position: relative; 
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    align-items: center;
+    justify-content: center;
+}
+#buybtn:hover {
+    background: #f311f7 !important;
+    color: white;
+}
+/* @media only screen and (max-width: ) { */
+    
+/* } */
+</style>
+<script>
+    function buyhover(obj) {
+        document.querySelectorAll(".hideonhover").forEach(el => {el.style.opacity = "0"})
+        document.getElementsByTagName("BODY")[0].classList.add("imgbackground")
+    }
+    function buyhoveroff(obj) {
+        document.querySelectorAll(".hideonhover").forEach(el => {el.style.opacity = "1"})
+        document.getElementsByTagName("BODY")[0].classList.remove("imgbackground")
+    }
+    function buyclick(obj) {
+        window.location.href = "https://buy.stripe.com/test_dR62bpbR7drn61aaEE"
+    }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: black; height: calc(100% - 60px); display: flex; flex-direction: column; margin: 40px 10px 20px; text-align: center">
+    <div class="hideonhover" id="capcontainer">
+        <img id="cap" src="cap2.png" style="z-index: 100">
+        <!-- <div id="flashes"> -->
+            <!-- <div class="flash"> -->
+                <img src="flash.png" class="flashimg" id="flash1">
+            <!-- <svg viewBox="0 0 1011 757" width="100%" height="80%">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M366.087 77.436L329.158 221.468L229.814 191.31V364.981L78.9783 288.025L113.307 466.375L2 567.77L195.486 617.167L210.05 726.362L383.251 671.764L427.981 756L541.889 691.523L606.384 756L685.443 654.605L774.904 706.603L804.551 597.408L973.071 632.247L888.811 439.337L1010 322.863L856.563 255.786L888.811 114.874L713.009 171.551L651.115 1L504.96 127.353L366.087 77.436Z" fill="#FF00F5" stroke="black"></path></g>
+            </svg> -->
+        <!-- </div> -->
+        <!-- <div class="flash" id="flash2"> -->
+            <!-- <svg viewBox="0 0 1011 757" width="100%" height="80%">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M353 75.5L317.5 214L222 185V352L77 278L110 449.5L3 547L189 594.5L203 699.5L369.5 647L412.5 728L522 666L584 728L660 630.5L746 680.5L774.5 575.5L936.5 609L855.5 423.5L972 311.5L824.5 247L855.5 111.5L686.5 166L627 2L486.5 123.5L353 75.5Z" fill="#D9D9D9" stroke="black" stroke-width="2"/></g>
+            </svg> -->
+            <!-- <img src="flash2.png" class="flashimg" id="flash2"> -->
+        <!-- </div> -->
+    <!-- </div> -->
+    </div>
+    <h2 class="hideonhover" style="color: white; margin: 0">CAP</h2>
+    <h4 class="hideonhover" style="color: white; margin: 10px; font-weight: normal">60€</h4>
+    <button onmouseover="buyhover(this)" onmouseleave="buyhoveroff(this)" onclick="buyclick(this)" id="buybtn" style="cursor: pointer; width: fit-content; background: #8FFF00; border: none; margin: 0 auto; padding: 4px 20px">BUY NOW</button>
+</body>
